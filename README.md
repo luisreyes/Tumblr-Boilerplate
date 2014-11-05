@@ -1,11 +1,11 @@
-Tumblr Theme Boiler Plate v1.0
+Tumblr Theme Boilerplate v1.0
 ==============================
 
-<strong>Author</strong>: Luis Reyes <a href="http://luisreyes.com">luisreyes.com</a>
+<strong>Author</strong>:<a href="http://luisreyes.com" title="luisreyes.com">Luis Reyes</a>
 
 
 <strong>Theme support</strong>:
-<a href="mailto:luis@luisreyes.com">luis@luisreyes.com</a>
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%6C%75%69%73%40%6C%75%69%73%72%65%79%65%73%2E%63%6F%6D">luis@luisreyes.com</a>
 
 
 Changelog
