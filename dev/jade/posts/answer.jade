@@ -1,0 +1,31 @@
+//- Answer Post
+|{block:Answer}
+
+
+//    _                           
+//   /_\  _ _  ____ __ _____ _ _  
+//  / _ \| ' \(_-< V  V / -_) '_| 
+// /_/ \_\_||_/__/\_/\_/\___|_|   
+
+
+//- Question
+section.theme-question
+	img.portrait(src="{AskerPortraitURL-24}")
+	h3.question {Question}
+
+//- Answer
+|{block:Answerer}
+
+section.theme-answer
+	img.portrait(src="{AnswererPortraitURL-16}")
+	h5.answer {Answer}
+	div.answerer {Answerer}
+
+|{/block:Answerer}
+
+//- Replies
+section.theme-replies
+	div.replies {Replies}
+
+//- END Answer Post   
+|{/block:Answer}

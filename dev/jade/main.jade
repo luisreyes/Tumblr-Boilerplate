@@ -1,0 +1,16 @@
+|{block:SearchPage}
+h2 {block:NoSearchResults}Sorry we couldn't find anything tagged {/block:NoSearchResults}{SearchQuery}
+|{/block:SearchPage}
+
+|{block:TagPage}
+h2.accent-color {Tag}
+hr
+|{/block:TagPage}
+
+|{block:Posts}
+include posts
+|{/block:Posts}
+
+|{block:Pagination}
+include pagination
+|{/block:Pagination}

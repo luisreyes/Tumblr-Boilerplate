@@ -1,0 +1,29 @@
+//- Chat Post
+|{block:Chat}
+
+
+//   ___ _         _    
+//  / __| |_  __ _| |_  
+// | (__| ' \/ _` |  _| 
+//  \___|_||_\__,_|\__| 
+
+
+section.theme-chat
+
+	//- Title
+	|{block:Title}
+	h2.title {Title}
+	|{/block:Title}
+
+	//- Chat Lines
+	|{block:Lines}
+	section.chat
+		div.chat-row
+			|{block:Label}
+			span.chat-label {Label}  
+			|{/block:Label}
+			span.chat-line {Line}
+	|{/block:Lines}
+
+//- End Audio Post
+|{/block:Chat}

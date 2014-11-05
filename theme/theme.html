@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]> <html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!--======================================================-->
+<!--   ________ ________  _______                         -->
+<!--  /_  __/ // / __/  |/  / __/                         -->
+<!--   / / / _  / _// /|_/ / _/                           -->
+<!--  /_/ /_//_/___/_/  /_/___/                           -->
+<!--                                                      -->
+<!--======================================================-->
+<!-- Author: Luis Reyes                                   -->
+<!-- Website: http://luisreyes.com                        -->
+<!-- Github: luisreyes                                    -->
+<!-- Twitter: @luisreyesdev                               -->
+<!-- Theme: [THEME NAME]                                  -->
+<!-- Version: [THEME VERSION]                             -->
+<!--======================================================-->
+
+<head>
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <![endif]-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway:400,600">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:400,700">
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="THEMECSS_HERE">
+  <title>{Title}</title>
+  <link rel="shortcut icon" type="image/x-icon" href="{Favicon}">
+  <link rel="alternate" type="application/rss+xml" href="{RSS}">{block:Description}
+  <meta name="description" content="{MetaDescription}">{/block:Description}
+  <!--===========================================================-->
+  <!--  ________                   ____       __  _              -->
+  <!-- /_  __/ /  ___ __ _  ___   / __ \___  / /_(_)__  ___  ___ -->
+  <!--  / / / _ \/ -_)  ' \/ -_) / /_/ / _ \/ __/ / _ \/ _ \(_-< -->
+  <!-- /_/ /_//_/\__/_/_/_/\__/  \____/ .__/\__/_/\___/_//_/___/ -->
+  <!--                               /_/                         -->
+  <!--===========================================================-->
+  <meta name="if:Show Sidebar" content="1">
+  <meta name="if:Show Post Notes on Sidebar" content="1">
+  <meta name="text:Custom Navigation List" content="">
+  <meta name="text:Google Analytics Tracking ID" content="">
+  <meta name="select:Tweets to Show" content="1" title="1">
+  <meta name="select:Tweets to Show" content="2" title="2">
+  <meta name="select:Tweets to Show" content="3" title="3">
+  <meta name="select:Tweets to Show" content="4" title="4">
+  <meta name="select:Tweets to Show" content="5" title="5">
+  <meta name="select:Tweets to Show" content="10" title="10">
+  <meta name="color:Header Background" content="#333">
+  <meta name="color:Headings Color" content="#333">
+  <meta name="color:Font Color" content="#666">
+  <meta name="color:Links" content="#CAA40E">
+  <meta name="color:Links Hover" content="{AccentColor}">
+  <meta name="select:Headings Font" content="'Helvetica Neue',Helvetica,sans-serif" title="Helvetica Neue">
+  <meta name="select:Headings Font" content="'Open Sans',sans-serif" title="Open Sans">
+  <meta name="select:Headings Font" content="'Raleway',sans-serif" title="Raleway">
+  <meta name="select:Headings Font" content="'Roboto',sans-serif" title="Roboto">
+  <meta name="select:Nav Font" content="'Helvetica Neue',Helvetica,sans-serif" title="Helvetica Neue">
+  <meta name="select:Nav Font" content="'Open Sans',sans-serif" title="Open Sans">
+  <meta name="select:Nav Font" content="'Raleway',sans-serif" title="Raleway">
+  <meta name="select:Nav Font" content="'Roboto',sans-serif" title="Roboto">
+  <meta name="select:Body Font" content="'Helvetica Neue',Helvetica,sans-serif" title="Helvetica Neue">
+  <meta name="select:Body Font" content="'Open Sans',sans-serif" title="Open Sans">
+  <meta name="select:Body Font" content="'Raleway',sans-serif" title="Raleway">
+  <meta name="select:Body Font" content="'Roboto',sans-serif" title="Roboto">
+  <!--===========================================================-->
+  <!--                    ______       __                        -->
+  <!--                   / __/ /___ __/ /__ ___                  -->
+  <!--                  _\ \/ __/ // / / -_|_-<                  -->
+  <!--                 /___/\__/\_, /_/\__/___/                  -->
+  <!--                         /___/                             -->
+  <!--===========================================================-->
+  <style>
+    body {
+        background-color: {BackgroundColor};
+        color: {color:Font Color};
+        font-family:{select:Body Font}
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: {color:Headings Color}
+        font-family: {select:Headings Font}
+    }
+    
+    a:link,
+    a:visited { color: {color:Links} }
+    
+    a:active,
+    a:hover { color: {color:Links Hover} }
+    
+    :focus { outline-color: {AccentColor} }
+    
+    ::selection,
+    ::-webkit-selection,
+    ::-moz-selection,
+    { color:{color:Font Color}; background-color: {AccentColor} }
+    
+    .accent{ color: {AccentColor} }
+    
+    header {
+      background-image: url({HeaderImage});
+      background-color: {color:Header Background};
+    }
+    
+    {CustomCSS}
+  </style>
+</head>
+
+<body>
+  <section class="app-header">
+    <header>Header</header>
+    <nav>
+      <ul class="theme-navigation">
+        <li> <a href="/"><i class="fa"></i><span>{lang:Home}</span></a>
+        </li>{text:Custom Navigation List}{block:AskEnabled}
+        <li><a href="/ask" title="{AskLabel}">{AskLabel}</a>
+        </li>{/block:AskEnabled}{block:SubmissionsEnabled}
+        <li><a href="/submit" title="{SubmitLabel}">{SubmitLabel}</a>
+        </li>{/block:SubmissionsEnabled}{block:HasPages} {block:Pages}
+        <li> <a href="{URL}"><i class="fa"></i><span>{Label}</span></a>
+        </li>{/block:Pages} {/block:HasPages}
+      </ul>
+    </nav>
+  </section>
+  <section class="app-content">
+    <main>{block:SearchPage}
+      <h2>{block:NoSearchResults}Sorry we couldn't find anything tagged {/block:NoSearchResults}{SearchQuery}</h2>{/block:SearchPage} {block:TagPage}
+      <h2 class="accent-color">{Tag}</h2>
+      <hr>{/block:TagPage} {block:Posts}
+      <div data-permalink="{Permalink}" class="{block:IndexPage}index-page{/block:IndexPage} {block:PermalinkPage}permalink-page{/block:PermalinkPage} {block:SearchPage}search-page{/block:SearchPage} post {PostType}-type">
+        <!--===========================================================-->
+        <!--                     ___           __                      -->
+        <!--                    / _ \___  ___ / /____                  -->
+        <!--                   / ___/ _ \(_-</ __(_-<                  -->
+        <!--                  /_/   \___/___/\__/___/                  -->
+        <!--                                                           -->
+        <!--===========================================================-->
+        {block:PermalinkPage}
+        <div class="meta head">{block:HasTags}
+          <div class="tags"><i class="fa fa-tags pull-left"></i>
+            <ul class="pull-right">{block:Tags}
+              <li><a href="{TagURL}">&#x23;{Tag}</a>
+              </li>{block:Tags}
+            </ul>
+          </div>{/block:HasTags}
+          <div class="pull-left">{LikeButton size="20"}</div>
+          <div class="pull-left">{ReblogButton size="20"}</div>{block:Date}
+          <div class="time">{TimeAgo}</div>{/block:Date}
+          <div class="clear"></div>
+        </div>{/block:PermalinkPage}{block:Text}
+        <!--  _____        _    -->
+        <!-- |_   _|____ _| |_  -->
+        <!--   | |/ -_) \ /  _| -->
+        <!--   |_|\___/_\_\\__| -->
+
+        <section class="theme-text">{block:Title}
+          <h2 class="title">{Title}</h2>{/block:Title}
+          <div>{Body}</div>
+        </section>{/block:Text}{block:Answer}
+        <!--    _                           -->
+        <!--   /_\  _ _  ____ __ _____ _ _  -->
+        <!--  / _ \| ' \(_-< V  V / -_) '_| -->
+        <!-- /_/ \_\_||_/__/\_/\_/\___|_|   -->
+
+        <section class="theme-question">
+          <img src="{AskerPortraitURL-24}" class="portrait">
+          <h3 class="question">{Question}</h3>
+        </section>{block:Answerer}
+        <section class="theme-answer">
+          <img src="{AnswererPortraitURL-16}" class="portrait">
+          <h5 class="answer">{Answer}</h5>
+          <div class="answerer">{Answerer}</div>
+        </section>{/block:Answerer}
+        <section class="theme-replies">
+          <div class="replies">{Replies}</div>
+        </section>{/block:Answer}{block:Chat}
+        <!--   ___ _         _    -->
+        <!--  / __| |_  __ _| |_  -->
+        <!-- | (__| ' \/ _` |  _| -->
+        <!--  \___|_||_\__,_|\__| -->
+
+        <section class="theme-chat">{block:Title}
+          <h2 class="title">{Title}</h2>{/block:Title}{block:Lines}
+          <section class="chat">
+            <div class="chat-row">{block:Label}<span class="chat-label">{Label}  </span>{/block:Label}<span class="chat-line">{Line}</span>
+            </div>
+          </section>{/block:Lines}
+        </section>{/block:Chat}{block:Link}
+        <!--  _    _      _    -->
+        <!-- | |  (_)_ _ | |__ -->
+        <!-- | |__| | ' \| / / -->
+        <!-- |____|_|_||_|_\_\ -->
+
+        <section class="theme-link">
+          <section class="thumb"><a href="{URL}" title="{Name}" target="{Target}">{block:Thumbnail}<img src="{Thumbnail}" alt="{Host}">{/block:Thumbnail}<i class="fa fa-globe {block:Thumbnail}hidden{/block:Thumbnail}"></i></a>
+          </section>
+          <section class="data">
+            <a href="{URL}" title="{Name}" traget="{Target}">
+              <h4 class="name">{Name} </h4>{block:Host}
+              <section class="host">{Host}</section>{/block:Host}</a>
+          </section>
+        </section>{block:Description}
+        <section class="description">{Description}</section>{/block:Description}{/block:Link}{block:Video}
+        <!-- __   ___    _          -->
+        <!-- \ \ / (_)__| |___ ___  -->
+        <!--  \ V /| / _` / -_) _ \ -->
+        <!--   \_/ |_\__,_\___\___/ -->
+
+        <section class="theme-video">
+          <div class="video">{Video-700}</div>{block:PlayCount}
+          <section class="plays">{PlayCountWithLabel}</section>{/block:PlayCount} {block:Caption}
+          <section class="caption">{Caption}</section>{/block:Caption}
+        </section>{/block:Video}{block:Audio}
+        <!--    _          _ _      -->
+        <!--   /_\ _  _ __| (_)___  -->
+        <!--  / _ \ || / _` | / _ \ -->
+        <!-- /_/ \_\_,_\__,_|_\___/ -->
+
+        {block:ExternalAudio}
+        <section class="theme-audio">
+          <div style="{block:AlbumArt} background-image:url('{AlbumArtURL}'); {/block:AlbumArt}" class="art"></div>{block:AudioPlayer}
+          <div class="player">{AudioPlayer}</div>{/block:AudioPlayer}{block:Artist}
+          <div class="artist"><span>Artist: {Artist}</span>
+          </div>{/block:Artist}{block:TrackName}
+          <div class="track"><span>Track: {TrackName}</span>
+          </div>{/block:TrackName}{block:Album}
+          <div class="album"><span>Album: {Album}</span>
+          </div>{/block:Album}
+          <div class="playcount"><span class="label">{lang:Plays}: </span><span>{PlayCount}</span>
+          </div>
+        </section>{/block:ExternalAudio}{block:Caption}
+        <section class="caption">{Caption}</section>{/block:Caption}{/block:Audio}{block:Photo}
+        <!--  ___ _        _        -->
+        <!-- | _ \ |_  ___| |_ ___  -->
+        <!-- |  _/ ' \/ _ \  _/ _ \ -->
+        <!-- |_| |_||_\___/\__\___/ -->
+
+        <section class="theme-photo">{block:LinkURL}<a href="{LinkURL}" alt="{PhotoAlt}">{/block:LinkURL}<img src="{PhotoURL-500}"></a>
+        </section>{block:Caption}
+        <section class="caption">{Caption}</section>{/block:Caption}{/block:Photo}{block:Quote}
+        <!--   ___           _        -->
+        <!--  / _ \ _  _ ___| |_ ___  -->
+        <!-- | (_) | || / _ \  _/ -_) -->
+        <!--  \__\_\\_,_\___/\__\___| -->
+
+        <section class="theme-quote">
+          <div class="{Length}"><i class="fa fa-quote-left"></i><span class="quote-text">{Quote}</span><i class="fa fa-quote-right"> </i>
+          </div>
+        </section>{block:Source}
+        <section class="quote-source">— {Source}</section>{/block:Source}{/block:Quote}
+        <div class="clear"></div>
+
+        <div class="meta foot">{block:IndexPage}
+          <div class="open-permalink"><i class="fa fa-share pull-left"></i><a href="{Permalink}" title="{lang:See more}">{lang:See more}</a>
+          </div>{/block:IndexPage} {block:HasTags}
+          <div class="tags"><i class="fa fa-tags pull-left"></i>
+            <ul class="pull-right">{block:Tags}
+              <li><a href="{TagURL}">&#x23;{Tag}</a>
+              </li>{block:Tags}
+            </ul>
+          </div>{/block:HasTags} {block:IndexPage}
+          <div class="pull-left">{LikeButton size="20"}</div>
+          <div class="pull-left">{ReblogButton size="20"}</div>{/block:IndexPage} {block:Date}
+          <div class="time pull-left">{TimeAgo}</div>{/block:Date}
+          <div class="clear"></div>
+        </div>
+        <!--==========================================================-->
+        <!--=======================  POSTS END  ======================-->
+        <!--==========================================================-->
+      </div>{/block:Posts} {block:Pagination}
+      <section class="theme-pagination">{block:Pagination}
+        <ul class="pagination">{block:PreviousPage}
+          <li><a href="{PreviousPage}"><i class="fa fa-arrow-left"></i></a>
+          </li>{/block:PreviousPage} {block:JumpPagination length="5"} {block:CurrentPage}
+          <li class="active"><a href="#">
+               
+              {PageNumber}<span class="sr-only">{lang:CurrentPage of TotalPages} </span></a>
+          </li>{/block:CurrentPage} {block:JumpPage}
+          <li><a href="{URL}">{PageNumber}</a>
+          </li>{/block:JumpPage} {/block:JumpPagination} {block:NextPage}
+          <li><a href="{NextPage}"><i class="fa fa-arrow-right"></i></a>
+          </li>{/block:NextPage}
+        </ul>{/block:Pagination}
+      </section>{/block:Pagination}
+    </main>
+    <aside>{block:PostNotes}
+      <section class="sidebar-block">
+        <section class="theme-notes">
+          <h3>Notes</h3><span>{NoteCountWithLabel}</span>
+          <div class="notes">{PostNotes}</div>
+        </section>
+      </section>{/block:PostNotes}{block:Twitter}
+      <section class="sidebar-block">
+        <section class="theme-twitter">
+          <div id="twitter">
+            <h3>Tweets<a href="http://twitter.com/{TwitterUsername}" title="{TwitterUsername}'s Tweets"> <i class="fa fa-twitter"></i></a></h3>
+            <div id="tweets"></div>
+          </div>
+        </section>
+      </section>{/block:Twitter}
+    </aside>
+  </section>
+  <section class="app-footer">
+    <footer>Footer</footer>
+  </section>
+  <!-- Google Analytics-->
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', '{text:Google Analytics Tracking ID}', 'auto');
+    ga('send', 'pageview');
+  </script>{block:Twitter}
+  <script type="text/javascript">
+    function recent_tweets(data) {
+    
+      var c = (data.length >= {select:Tweets to Show}) ? {select:Tweets to Show} : data.length;
+      var activeSidebar = document.getElementById('active-sidebar').ownerDocument.getElementById('twitter');
+      for (i=0; i<c; i++) {
+        activeSidebar.ownerDocument.getElementById("tweets").innerHTML =
+          activeSidebar.ownerDocument.getElementById("tweets").innerHTML +
+          '<a href="http://twitter.com/{TwitterUsername}/status/' +
+          (data[i].id_str ? data[i].id_str : data[i].id) +
+          '"><div class="content">' + data[i].text +
+          '</div></a>';
+      }
+      activeSidebar.style.display = 'block';
+    }
+  </script>
+  <script type="text/javascript" src="/tweets.js"></script>{/block:Twitter}
+  <script type="text/javascript" src="THEMELIB_HERE"></script>
+  <script type="text/javascript" src="THEMEJS_HERE"></script>
+</body>
+
+</html>

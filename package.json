@@ -1,0 +1,26 @@
+{
+  "name": "Tumblr Theme",
+  "version": "0.1.0",
+  "description": "Tumblr Theme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luis Reyes <luis@luisreyes.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "gulp-autoprefixer": "^1.0.1",
+    "gulp-concat": "^2.4.1",
+    "gulp-connect": "^2.0.6",
+    "gulp-html-prettify": "0.0.1",
+    "gulp-jade": "^0.8.0",
+    "gulp-jshint": "^1.8.5",
+    "gulp-minify-css": "^0.3.10",
+    "gulp-open": "^0.3.0",
+    "gulp-plumber": "^0.6.6",
+    "gulp-sass": "^1.1.0",
+    "gulp-uglify": "^1.0.1",
+    "gulp-watch": "^1.1.0",
+    "jshint-stylish": "^1.0.0"
+  }
+}

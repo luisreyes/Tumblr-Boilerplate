@@ -1,0 +1,28 @@
+ul.theme-navigation
+  li 
+    a(href="/")
+      i.fa
+      span {lang:Home}
+  |{text:Custom Navigation List}
+  
+  //- Ask
+  |{block:AskEnabled}
+  li
+    a(href="/ask" title="{AskLabel}") {AskLabel}
+  |{/block:AskEnabled}
+
+  //- Submit
+  |{block:SubmissionsEnabled}
+  li
+    a(href="/submit" title="{SubmitLabel}") {SubmitLabel}
+  |{/block:SubmissionsEnabled}
+
+  //- Pages
+  |{block:HasPages}
+  |{block:Pages}
+  li 
+    a(href="{URL}")
+      i.fa
+      span {Label}
+  |{/block:Pages}
+  |{/block:HasPages}

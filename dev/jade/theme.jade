@@ -1,0 +1,63 @@
+doctype html
+
+<!--[if IE 8]> <html class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]> <html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en">
+<!--<![endif]-->
+//======================================================
+//   ________ ________  _______                         
+//  /_  __/ // / __/  |/  / __/                         
+//   / / / _  / _// /|_/ / _/                           
+//  /_/ /_//_/___/_/  /_/___/                           
+//                                                      
+//======================================================
+// Author: Luis Reyes                                   
+// Website: http://luisreyes.com                        
+// Github: luisreyes                                    
+// Twitter: @luisreyesdev                               
+// Theme: [THEME NAME]                                  
+// Version: [THEME VERSION]                             
+//======================================================
+head
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <![endif]-->
+  meta(charset="utf-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+  each link in stylesheet
+    link(rel="stylesheet" type="text/css" href=link)
+  
+  title {Title}
+  link(rel="shortcut icon" type="image/x-icon" href="{Favicon}")
+  link(rel="alternate" type="application/rss+xml" href="{RSS}")
+  |{block:Description}
+  meta(name="description" content="{MetaDescription}")
+  |{/block:Description}
+
+  include theme_options
+  include styles
+
+body
+  section.app-header
+    header
+      include header
+    nav
+      include navigation
+  section.app-content
+    main
+      include main
+    aside
+      include aside
+  section.app-footer
+    footer
+      include footer
+    
+  
+  include scripts
+  each script in scripts
+    script(type="text/javascript" src=script)
+
+
+    
+</html>

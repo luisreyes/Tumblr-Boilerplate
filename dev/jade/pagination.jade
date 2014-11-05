@@ -1,0 +1,35 @@
+section.theme-pagination
+  |{block:Pagination}
+  ul.pagination
+    
+    |{block:PreviousPage}
+    li
+      a(href="{PreviousPage}")
+        i.fa.fa-arrow-left
+    |{/block:PreviousPage}
+    
+    |{block:JumpPagination length="5"}
+    
+    |{block:CurrentPage}
+    li(class="active")
+      a(href="#") 
+        |{PageNumber}
+        span(class="sr-only") {lang:CurrentPage of TotalPages} 
+    |{/block:CurrentPage}
+    
+    |{block:JumpPage}
+    li
+      a(href="{URL}") {PageNumber}
+    |{/block:JumpPage}
+    
+    |{/block:JumpPagination}
+    
+    |{block:NextPage}
+    li
+      a(href="{NextPage}")
+        i.fa.fa-arrow-right
+    |{/block:NextPage}
+
+  |{/block:Pagination}
+
+  

@@ -1,0 +1,32 @@
+//- Scripts to be included at the bottom of the page
+
+// Google Analytics
+script(type='text/javascript').
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '{text:Google Analytics Tracking ID}', 'auto');
+  ga('send', 'pageview');
+
+
+|{block:Twitter}
+script(type="text/javascript").
+  function recent_tweets(data) {
+
+    var c = (data.length >= {select:Tweets to Show}) ? {select:Tweets to Show} : data.length;
+    var activeSidebar = document.getElementById('active-sidebar').ownerDocument.getElementById('twitter');
+    for (i=0; i<c; i++) {
+      activeSidebar.ownerDocument.getElementById("tweets").innerHTML =
+        activeSidebar.ownerDocument.getElementById("tweets").innerHTML +
+        '<a href="http://twitter.com/{TwitterUsername}/status/' +
+        (data[i].id_str ? data[i].id_str : data[i].id) +
+        '"><div class="content">' + data[i].text +
+        '</div></a>';
+    }
+    activeSidebar.style.display = 'block';
+  }
+
+script(type="text/javascript" src="/tweets.js")
+|{/block:Twitter}

@@ -1,0 +1,39 @@
+//- Link Post
+|{block:Link}
+
+
+//  _    _      _    
+// | |  (_)_ _ | |__ 
+// | |__| | ' \| / / 
+// |____|_|_||_|_\_\ 
+
+                  
+section.theme-link
+  section.thumb
+    a(href="{URL}" title="{Name}" target="{Target}")
+      
+      //- Thumbnail
+      |{block:Thumbnail}
+      img(src="{Thumbnail}" alt="{Host}")
+      |{/block:Thumbnail}
+
+      i.fa.fa-globe(class="{block:Thumbnail}hidden{/block:Thumbnail}")
+
+  section.data
+    a(href="{URL}" title="{Name}" traget="{Target}")
+      
+      //- Name
+      h4.name {Name} 
+
+      //- Host
+      |{block:Host}
+      section.host {Host}
+      |{/block:Host}
+
+
+|{block:Description}
+section.description {Description}
+|{/block:Description}
+
+//- End Link Post
+|{/block:Link}

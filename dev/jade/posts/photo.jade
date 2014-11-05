@@ -1,0 +1,24 @@
+//- Photo Post
+|{block:Photo}
+
+
+//  ___ _        _        
+// | _ \ |_  ___| |_ ___  
+// |  _/ ' \/ _ \  _/ _ \ 
+// |_| |_||_\___/\__\___/ 
+
+                       
+section.theme-photo
+	|{block:LinkURL}
+	a(href="{LinkURL}" alt="{PhotoAlt}")
+		|{/block:LinkURL}
+		img(src="{PhotoURL-500}")
+
+//- Post Caption
+|{block:Caption}
+section.caption {Caption}
+|{/block:Caption}
+
+
+//- End Photo Post
+|{/block:Photo}

@@ -1,0 +1,79 @@
+div(class="{block:IndexPage}index-page{/block:IndexPage} {block:PermalinkPage}permalink-page{/block:PermalinkPage} {block:SearchPage}search-page{/block:SearchPage} post {PostType}-type" data-permalink="{Permalink}")
+  //===========================================================
+  //                     ___           __                      
+  //                    / _ \___  ___ / /____                  
+  //                   / ___/ _ \(_-</ __(_-<                  
+  //                  /_/   \___/___/\__/___/                  
+  //                                                           
+  //===========================================================
+
+
+  //- Render the meta bar at the Head of the post only on the permalink page
+  |{block:PermalinkPage}
+
+
+  div.meta.head
+    |{block:HasTags} 
+    div.tags
+      i.fa.fa-tags.pull-left
+      ul.pull-right
+        |{block:Tags}
+        li
+          a(href="{TagURL}") &#x23;{Tag}
+        |{block:Tags}
+    |{/block:HasTags}
+
+    div.pull-left {LikeButton size="20"}
+    div.pull-left {ReblogButton size="20"}            
+    |{block:Date}            
+    div.time {TimeAgo}
+    |{/block:Date}
+    div.clear
+
+  |{/block:PermalinkPage}
+
+  //- Post BEGIN
+  include posts/text
+  include posts/answer
+  include posts/chat
+  include posts/link
+  include posts/video
+  include posts/audio
+  include posts/photo
+  include posts/quote
+
+  div.clear
+  //- Post END
+
+
+  //- Render the meta bar at the Foot of the post
+  div.meta.foot
+    |{block:IndexPage}
+    div.open-permalink
+      i.fa.fa-share.pull-left
+      a(href="{Permalink}" title="{lang:See more}") {lang:See more}
+    |{/block:IndexPage}
+    |{block:HasTags} 
+    div.tags
+      i.fa.fa-tags.pull-left
+      ul.pull-right
+        |{block:Tags}
+        li
+          a(href="{TagURL}") &#x23;{Tag}
+        |{block:Tags}
+    |{/block:HasTags}
+
+    |{block:IndexPage}
+    div.pull-left {LikeButton size="20"}
+    div.pull-left {ReblogButton size="20"}
+    |{/block:IndexPage}            
+    |{block:Date}            
+    div.time.pull-left {TimeAgo}
+    |{/block:Date}
+    div.clear
+
+
+
+  //==========================================================
+  //=======================  POSTS END  ======================
+  //==========================================================

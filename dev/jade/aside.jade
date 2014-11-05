@@ -1,0 +1,20 @@
+//- Post Notes
+|{block:PostNotes}
+section.sidebar-block
+  section.theme-notes
+    h3 Notes
+    span {NoteCountWithLabel}
+    div.notes {PostNotes}
+|{/block:PostNotes}
+
+  
+//- Twitter
+|{block:Twitter}
+section.sidebar-block
+  section.theme-twitter
+    div#twitter
+      h3 Tweets
+        a(href="http://twitter.com/{TwitterUsername}" title="{TwitterUsername}'s Tweets") 
+          i.fa.fa-twitter
+      div#tweets
+|{/block:Twitter}
